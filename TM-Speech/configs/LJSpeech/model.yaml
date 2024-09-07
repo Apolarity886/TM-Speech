@@ -1,0 +1,77 @@
+AM:
+  encoder_type: TransMamba
+  batch_size: 16
+  dec_in: 1024
+  d_model: 256
+  dropout: 0.2
+  factor: 1
+  n_heads: 4
+  d_state: 16
+  d_conv: [9, 1]
+  d_layers: 4
+  c_out: 256
+  output_attention: True
+
+decoder:
+  dec_in: 1024
+  d_model: 256
+  conv_filter_size: 1024
+  dropout: 0.2
+  factor: 1
+  n_heads: 2
+  d_conv: [9, 1]
+  d_layers: 4
+  d_ff: 2048
+  activation: 'gelu'
+  c_out: 256
+  output_attention: True
+
+variance_predictor:
+  encoder_dim: 256
+  filter_size: 256
+  kernel_size: 3
+  dropout: 0.5
+
+
+variance_embedding:
+  pitch_quantization: "linear" # support 'linear' or 'log', 'log' is allowed only if the pitch values are not normalized during preprocessing
+  energy_quantization: "linear" # support 'linear' or 'log', 'log' is allowed only if the energy values are not normalized during preprocessing
+  n_bins: 256
+
+# gst:
+#   use_gst: False
+#   conv_filters: [32, 32, 64, 64, 128, 128]
+#   gru_hidden: 128
+#   token_size: 128
+#   n_style_token: 10
+#   attn_head: 4
+
+multi_speaker: False
+
+max_seq_len: 1000
+
+vocoder:
+  model: "HiFi-GAN" # support 'HiFi-GAN', 'MelGAN'
+  speaker: "LJSpeech" # support  'LJSpeech', 'universal'
+
+path:
+  ckpt_path: "./output/ckpt/LJSpeech"
+  log_path: "./output/log/LJSpeech"
+  result_path: "./output/result/LJSpeech"
+
+optimizer:
+  betas: [0.95, 0.998]
+  eps: 0.000000001
+  weight_decay: 0.0
+  grad_clip_thresh: 1.0
+  grad_acc_step: 1
+  warm_up_step: 4000
+  anneal_steps: [15000, 30000, 45000]
+  anneal_rate: 0.3
+
+step:
+  total_step: 60000
+  log_step: 100
+  synth_step: 1000
+  val_step: 1000
+  save_step: 3000
