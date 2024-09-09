@@ -1,10 +1,10 @@
 dataset: "AISHELL3"
 
 path:
-  corpus_path: "/home/wl/anaconda3/envs/audio/wl_windows/data_aishell3"
-  lexicon_path: "/home/wl/anaconda3/envs/audio/wl_windows/TM-Speech/lexicon/pinyin-lexicon-r.txt"
-  raw_path: "/home/wl/anaconda3/envs/audio/wl_windows/TM-Speech/raw_data"
-  preprocessed_path: "/home/wl/anaconda3/envs/audio/wl_windows/data_aishell3"
+  corpus_path: "./data_aishell3"
+  lexicon_path: "./TM-Speech/lexicon/pinyin-lexicon-r.txt"
+  raw_path: "./TM-Speech/raw_data"
+  preprocessed_path: "./data_aishell3"
 
 preprocessing:
   val_size: 512
