@@ -143,12 +143,12 @@ if __name__ == "__main__":
         "-p",
         "--preprocess_config",
         type=str,
-        default="/home/wl/anaconda3/envs/audio/wl_windows/TM-Speech/configs/LJSpeech/preprocess.yaml",
+        default="./TM-Speech/configs/LJSpeech/preprocess.yaml",
         required=False,
         help="path to preprocess.yaml",
     )
     parser.add_argument(
-        "-m", "--model_config", type=str, default="/home/wl/anaconda3/envs/audio/wl_windows/TM-Speech/configs/LJSpeech/model.yaml",required=False, help="path to model.yaml"
+        "-m", "--model_config", type=str, default="./TM-Speech/configs/LJSpeech/model.yaml",required=False, help="path to model.yaml"
     )
     parser.add_argument(
         "--pitch_control",
