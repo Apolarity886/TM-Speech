@@ -98,9 +98,9 @@ tensorboard --logdir output/log/LJSpeech
 to serve TensorBoard on your localhost.
 The loss curves, synthesized mel-spectrograms, and audios are shown.
 
-![img](img/loss picture.png)
-![img](img/mel picture.png)
-![img](img/audio picture.png)
+![image](img/loss picture.png)
+![image](img/mel picture.png)
+![image](img/audio picture.png)
 
 # Implementation Issues
 
