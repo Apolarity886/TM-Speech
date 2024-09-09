@@ -99,7 +99,6 @@ We compared FastSpeech2, Mamba-Transfomer and our TM-Speech based on encoder-dec
 
 # Implementation Issues
 
-- Following [xcmyz's implementation](https://github.com/xcmyz/FastSpeech), I use an additional Tacotron-2-styled Post-Net after the decoder, which is not used in the original FastSpeech 2.
 - Gradient clipping is used in the training.
 
 
