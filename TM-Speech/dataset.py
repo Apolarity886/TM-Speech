@@ -205,10 +205,10 @@ if __name__ == "__main__":
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     preprocess_config = yaml.load(
-        open("/home/wl/anaconda3/envs/svc/wl_windows/FS_mamba/configs/LJSpeech/preprocess.yaml", "r"), Loader=yaml.FullLoader
+        open("./TM-Speech/configs/LJSpeech/preprocess.yaml", "r"), Loader=yaml.FullLoader
     )
     model_config = yaml.load(
-        open("/home/wl/anaconda3/envs/svc/wl_windows/FS_mamba/configs/LJSpeech/model.yaml", "r"), Loader=yaml.FullLoader
+        open("./TM-Speech/configs/LJSpeech/model.yaml", "r"), Loader=yaml.FullLoader
     )
 
     train_dataset = Dataset(
