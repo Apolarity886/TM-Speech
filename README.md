@@ -98,9 +98,9 @@ tensorboard --logdir output/log/LJSpeech
 to serve TensorBoard on your localhost.
 The loss curves, synthesized mel-spectrograms, and audios are shown.
 
+![image](https://github.com/Apolarity886/TM-Speech/blob/be2679d44618b36d9f090d20c48ec1530a980f8e/img/loss%20picture.png))
+![image](https://github.com/Apolarity886/TM-Speech/blob/be2679d44618b36d9f090d20c48ec1530a980f8e/img/mel%20picture.png)
 ![image](https://github.com/Apolarity886/TM-Speech/blob/2312d943028fc195ace1e4d36fd3b8467a0531c6/img/audio%20picture.png)
-![image](img/mel picture.png)
-![image](img/audio picture.png)
 
 # Implementation Issues
 
