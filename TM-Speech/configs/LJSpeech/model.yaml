@@ -38,14 +38,6 @@ variance_embedding:
   energy_quantization: "linear" # support 'linear' or 'log', 'log' is allowed only if the energy values are not normalized during preprocessing
   n_bins: 256
 
-# gst:
-#   use_gst: False
-#   conv_filters: [32, 32, 64, 64, 128, 128]
-#   gru_hidden: 128
-#   token_size: 128
-#   n_style_token: 10
-#   attn_head: 4
-
 multi_speaker: False
 
 max_seq_len: 1000
@@ -74,4 +66,4 @@ step:
   log_step: 100
   synth_step: 1000
   val_step: 1000
-  save_step: 3000
+  save_step: 10000
