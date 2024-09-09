@@ -29,26 +29,15 @@ decoder:
 
 variance_predictor:
   encoder_dim: 256
-  depths: 8
   filter_size: 256
   kernel_size: 3
   dropout: 0.5
-  top_layers: 8
-  d_state: 16
 
 
 variance_embedding:
   pitch_quantization: "linear" # support 'linear' or 'log', 'log' is allowed only if the pitch values are not normalized during preprocessing
   energy_quantization: "linear" # support 'linear' or 'log', 'log' is allowed only if the energy values are not normalized during preprocessing
   n_bins: 256
-
-# gst:
-#   use_gst: False
-#   conv_filters: [32, 32, 64, 64, 128, 128]
-#   gru_hidden: 128
-#   token_size: 128
-#   n_style_token: 10
-#   attn_head: 4
 
 multi_speaker: True
 
@@ -64,7 +53,7 @@ path:
   result_path: "./output/result/AISHELL3"
 
 optimizer:
-  betas: [0.9, 0.98]
+  betas: [0.95, 0.998]
   eps: 0.000000001
   weight_decay: 0.0
   grad_clip_thresh: 1.0
@@ -76,6 +65,6 @@ optimizer:
 step:
   total_step: 60000
   log_step: 100
-  synth_step: 100
-  val_step: 100
+  synth_step: 1000
+  val_step: 1000
   save_step: 10000
