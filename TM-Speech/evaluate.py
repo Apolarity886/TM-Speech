@@ -87,15 +87,15 @@ def evaluate(model, step, configs, logger=None, vocoder=None):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--restore_step", type=int, default=30000)
+    parser.add_argument("--restore_step", type=int, default=0)
     parser.add_argument(
         "--preprocess_config",
         type=str,
-        default='/home/wl/anaconda3/envs/svc/wl_windows/TM-Speech/configs/LJSpeech/preprocess.yaml',
+        default='./TM-Speech/configs/LJSpeech/preprocess.yaml',
         help="path to preprocess.yaml"
     )
     parser.add_argument(
-         "--model_config", type=str, default='/home/wl/anaconda3/envs/svc/wl_windows/TM-Speech/configs/LJSpeech/model.yaml', help="path to model.yaml"
+         "--model_config", type=str, default='./TM-Speech/configs/LJSpeech/model.yaml', help="path to model.yaml"
     )
     args = parser.parse_args()
 
